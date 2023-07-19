@@ -1,0 +1,189 @@
+:root {
+    --size: 75px;
+    --color1: #503f54;
+    --color2: #97a043;
+    --color3: #f0a6c1;
+    --color4: #000000;
+    --color5: #a18384;
+    --color7: #d3da8e;
+    --color8: #91e95a;
+    --color9: #afe281;
+    --color6: #cbe98f;
+    --color10: #79c443;
+}
+
+body {
+    background-color: var(--color1);
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.top {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+/* https://getcssscan.com/css-buttons-examples | Button 55 */
+button {
+    align-self: center;
+    background-color: #fff;
+    background-image: none;
+    background-position: 0 90%;
+    background-repeat: repeat no-repeat;
+    background-size: 4px 3px;
+    border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: rgba(0, 0, 0, .1) 10px 10px 16px;
+    box-sizing: border-box;
+    color: #000;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    outline: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 250ms ease-in-out;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+button:hover {
+    box-shadow: rgba(0, 0, 0, .2) 2px 8px 16px;
+}
+
+button:active {
+    transform: translate3d(0, 2px, 0);
+}
+
+p {
+    text-align: center;
+    color: white;
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.main {
+    width: calc(var(--size) * 6);
+    height: calc(var(--size) * 7);
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.row1,
+.row2,
+.row3,
+.row4,
+.row5,
+.row6 {
+    display: flex;
+}
+
+.col1,
+.col2,
+.col3,
+.col4 {
+    height: var(--size);
+    width: var(--size);
+}
+
+.row1 div {
+    background-color: var(--color2);
+}
+
+.row1 .col2 {
+    border-top-right-radius: 100%;
+}
+
+.row1 .col3 {
+    border-top-left-radius: 100%;
+}
+
+.row1 .col4 {
+    border-top-right-radius: 100%;
+}
+
+.row2 :is(.col1, .col3) {
+    background-color: var(--color3);
+}
+
+.row2 :is(.col2, .col4) {
+    background-color: var(--color4);
+}
+
+.row2 .col1 {
+    border-bottom-left-radius: 100%;
+}
+
+.row2 .col2 {
+    border-bottom-right-radius: 100%;
+}
+
+.row2 .col3 {
+    border-bottom-left-radius: 100%;
+}
+
+.row2 .col4 {
+    border-bottom-right-radius: 100%;
+}
+
+:is(.row3, .row4) :is(.col1, .col4) {
+    background-color: var(--color5);
+}
+
+:is(.row3, .row4) :is(.col2, .col3) {
+    background-color: var(--color6);
+}
+
+.row4 .col1 {
+    border-bottom-left-radius: 100%;
+}
+
+.row4 .col4 {
+    border-bottom-right-radius: 100%;
+}
+
+.row6 .col1 {
+    background-color: var(--color7);
+    border-top-left-radius: 100%;
+}
+
+.row6 .col2 {
+    background-color: var(--color8);
+}
+
+.row6 .col3 {
+    background-color: var(--color9);
+}
+
+.row6 .col4 {
+    background-color: var(--color10);
+    border-top-right-radius: 100%;
+}
+
+@media only screen and (max-width: 425px) {
+    :root {
+        --size: 50px;
+    }
+}
